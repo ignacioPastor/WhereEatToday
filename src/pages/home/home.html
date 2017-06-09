@@ -1,14 +1,15 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+	<ion-navbar>
+		<ion-title>Where we eat today?</ion-title>
+	</ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+	<ion-list>
+		<button ion-item *ngFor="let place of places" (click)="onClickPlace(place)">{{place}}</button>
+	</ion-list>
+	<button ion-button color="secondary" outline icon-left (click)="onClickChoose()">
+		<ion-icon name="star-outline"></ion-icon>
+			Choose
+	</button>
 </ion-content>
