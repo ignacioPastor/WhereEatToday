@@ -12,4 +12,9 @@
 		<ion-icon name="star-outline"></ion-icon>
 			Choose
 	</button>
+    <ion-input type="text" value="" placeholder="New Place" [(ngModel)]="myNewPlace"></ion-input>
+	<button ion-button color="primary" outline icon-left (click)="onClickAdd()">Add</button>
+	<p></p>
+	<p>Today we eat in... {{selectedPlace}}</p>
+	<p></p>
 </ion-content>
